@@ -17,7 +17,7 @@ const errorEl = document.querySelector('.error');
 textMarkEl.classList.add('is-hidden');
 errorEl.classList.add('is-hidden');
 
-selectEl.addEventListener('change', createMarkUp);
+selectEl.addEventListener('change', onChangeSelect);
 
 updateSelect();
 
@@ -37,7 +37,7 @@ function updateSelect(data) {
     .catch(onFetchError);
 }
 
-function createMarkUp(event) {
+function onChangeSelect(event) {
   loaderEl.classList.toggle('is-hidden', 'loader');
   selectEl.classList.add('is-hidden');
   textMarkEl.classList.add('is-hidden');
@@ -48,11 +48,13 @@ function createMarkUp(event) {
     .then(data => {
       loaderEl.classList.toggle('loader', 'is-hidden');
       selectEl.classList.remove('is-hidden');
+
       const { url, breeds } = data[0];
 
       textMarkEl.innerHTML = `<img src="${url}" alt="${breeds[0].name}" width="400"/>
       <div class="box"><h2>${breeds[0].name}</h2><p>${breeds[0].description}</p>
       <p><strong>Temperament:</strong> ${breeds[0].temperament}</p></div>`;
+
       textMarkEl.classList.remove('is-hidden');
     })
     .catch(onFetchError);
@@ -62,7 +64,7 @@ function onFetchError() {
   selectEl.classList.remove('is-hidden');
   loaderEl.classList.toggle('loader', 'is-hidden');
 
-  new Notiflix.failure(
+  Notiflix.Notify.failure(
     'Oops! Something went wrong! Try reload the page or select another cat breed!'
   );
 }
