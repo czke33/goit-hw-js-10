@@ -12,13 +12,13 @@ p {
 }
 
 body {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
   overflow-x: hidden;
 }
 
 .select-container {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .breed-select {
@@ -66,11 +66,6 @@ body {
   font-weight: 600;
 }
 
-.loader {
-  font-size: 18px;
-  font-weight: 600;
-}
-
 .error {
   font-weight: 16px;
   font-weight: 500;
@@ -79,4 +74,8 @@ body {
 
 .is-hidden {
   display: none;
+}
+.loader {
+  font-size: 18px;
+  font-weight: 600;
 }
