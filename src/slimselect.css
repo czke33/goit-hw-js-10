@@ -47,7 +47,7 @@
   user-select: none;
   color: var(--ss-font-color);
   min-height: var(--ss-main-height);
-  width: 100%;
+  width: 30%;
   padding: var(--ss-spacing-s);
   cursor: pointer;
   border: 1px solid var(--ss-border-color);
@@ -83,7 +83,7 @@
   display: inline-flex;
   flex-wrap: wrap;
   gap: var(--ss-spacing-m);
-  flex: 1 1 100%;
+  flex: 1 1 30%;
 }
 .ss-main .ss-values .ss-placeholder {
   display: flex;
