@@ -17,7 +17,9 @@ const errorEl = document.querySelector('.error');
 textMarkEl.classList.add('is-hidden');
 errorEl.classList.add('is-hidden');
 
-const mainEl = document.querySelector('.ss.main');
+const mainEl = document.querySelector(
+  'slim-select/dist/slimselect.css/.ss.main'
+);
 mainEl.style.width = '30px';
 
 selectEl.addEventListener('change', onChangeSelect);
